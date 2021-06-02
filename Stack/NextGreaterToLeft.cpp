@@ -3,7 +3,7 @@
 #include <stack>
 #include <algorithm>
 
-std::vector<int> nearestGreaterElem(int arr[], int n)
+std::vector<int> NextGreaterToLeft(int arr[], int n)
 {
     std::vector<int> v;
     std::stack<int> s;
@@ -43,7 +43,7 @@ std::vector<int> nearestGreaterElem(int arr[], int n)
 int main()
 {
     int elems[4] = { 1, 3, 2, 4 };
-    std::vector<int> nxtGretElems = nearestGreaterElem(elems, 4);
+    std::vector<int> nxtGretElems = NextGreaterToLeft(elems, 4);
     for (auto val : nxtGretElems)
     {
         std::cout << val << " ";

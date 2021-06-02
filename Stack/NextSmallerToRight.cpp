@@ -3,7 +3,7 @@
 #include <stack>
 #include <algorithm>
 
-std::vector<int> NextLargestElement(int arr[], int n)
+std::vector<int> NextSmallerToRight(int arr[], int n)
 {
     std::vector<int> v;
     std::stack<int> s;
@@ -13,13 +13,13 @@ std::vector<int> NextLargestElement(int arr[], int n)
         {
             v.push_back(-1);
         }        
-        else if(s.size() > 0 && s.top() > arr[i])
+        else if(s.size() > 0 && s.top() < arr[i])
         {
             v.push_back(s.top());
         }
-        else if(s.size() > 0 && s.top() <= arr[i])
+        else if(s.size() > 0 && s.top() >= arr[i])
         {
-            while(s.size() > 0 && s.top() <= arr[i])
+            while(s.size() > 0 && s.top() >= arr[i])
             {
                 s.pop();
             }
@@ -44,8 +44,8 @@ std::vector<int> NextLargestElement(int arr[], int n)
 
 int main()
 {
-    int elems[4] = { 1, 3, 2, 4 };
-    std::vector<int> nxtGretElems = NextLargestElement(elems, 4);
+    int elems[5] = { 4, 5, 2, 10, 8 };
+    std::vector<int> nxtGretElems = NextSmallerToRight(elems, 5);
     for (auto val : nxtGretElems)
     {
         std::cout << val << " ";
