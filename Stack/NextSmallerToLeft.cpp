@@ -43,8 +43,8 @@ std::vector<int> NextSmallerToLeft(int arr[], int n)
 int main()
 {
     int elems[5] = { 4, 5, 2, 10, 8 };
-    std::vector<int> nxtGretElems = NextSmallerToLeft(elems, 5);
-    for (auto val : nxtGretElems)
+    std::vector<int> lst = NextSmallerToLeft(elems, 5);
+    for (auto val : lst)
     {
         std::cout << val << " ";
     }

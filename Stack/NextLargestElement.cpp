@@ -45,8 +45,8 @@ std::vector<int> NextLargestElement(int arr[], int n)
 int main()
 {
     int elems[4] = { 1, 3, 2, 4 };
-    std::vector<int> nxtGretElems = NextLargestElement(elems, 4);
-    for (auto val : nxtGretElems)
+    std::vector<int> lst = NextLargestElement(elems, 4);
+    for (auto val : lst)
     {
         std::cout << val << " ";
     }
