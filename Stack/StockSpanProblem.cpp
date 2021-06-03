@@ -38,13 +38,12 @@ std::vector<int> StockSpan(int arr[], int n)
         indexValueStack.push({i, arr[i]});
     }
 
-    std::vector<int> lst;
     for (int i = 0; i < v.size(); i++)
     {
-        lst.push_back(i - v[i]);
+        v[i] = i - v[i];
     }
 
-    return lst;
+    return v;
 }
 
 int main()
